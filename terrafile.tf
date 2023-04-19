@@ -15,7 +15,7 @@ secret_key = var.secretkey
 }
 variable "region_name" {
 type=string
-default= "ap-south-1"
+default= "us-east-1"
 }
 variable "server_port" {
 type= number
@@ -26,7 +26,7 @@ type = list(string)
 default = ["0.0.0.0/0"]
 }
 resource "aws_instance" "myec2" {
-ami = "ami-0d81306eddc614a45"
+ami = "ami-06e46074ae430fba6"
 instance_type = "t2.micro"
 vpc_security_group_ids = [aws_security_group.ownsg.id]
 key_name = "tf-key-pair"
